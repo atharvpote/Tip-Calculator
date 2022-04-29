@@ -8,9 +8,15 @@ const totalAmountDisplay = document.querySelector("#total-amount");
 const resetButton = document.querySelector("#reset-button");
 const selectTipPercentageClass = "SELECTED";
 const selectTipPercentageClassSkin = "calculator-select-tip-button-SELECTED";
+const noOfPeopleErrorZone = document.querySelector(
+  "#number-of-people-error-zone"
+);
+const activateNoOfPeopleErrorZone = "number-of-people-error-ACTIVE";
 
 // Event Listeners
-billInput.addEventListener("input", () => inputListener());
+billInput.addEventListener("input", () => {
+  inputListener();
+});
 
 tipButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -36,7 +42,10 @@ customTipInput.addEventListener("input", () => {
   inputListener();
 });
 
-numberOfPeopleInput.addEventListener("input", () => inputListener());
+numberOfPeopleInput.addEventListener("input", () => {
+  numberOfPeopleErrorHandler();
+  inputListener();
+});
 
 resetButton.addEventListener("click", () => {
   billInput.value = null;
@@ -45,6 +54,8 @@ resetButton.addEventListener("click", () => {
   defaultTip.classList.add(selectTipPercentageClassSkin);
   customTipInput.value = null;
   numberOfPeopleInput.value = null;
+  removeNumberOfPeopleErrorClass();
+
   inputListener();
 });
 
@@ -90,6 +101,7 @@ function calculateTipAmountPerPerson({
   numberOfPeople,
 }) {
   if (!billAmount || !numberOfPeople) return "";
+  if (!tipPercentage) return 0;
 
   return ((billAmount * tipPercentage) / 100 / numberOfPeople).toFixed(2);
 }
@@ -121,4 +133,18 @@ function updateTotalAmountPerPerson(amount) {
 function inputListener() {
   updateTipAmountPerPerson(calculateTipAmountPerPerson(getValues()));
   updateTotalAmountPerPerson(calculateTotalAmountPerPerson(getValues()));
+}
+
+function numberOfPeopleErrorHandler() {
+  !Number.parseInt(numberOfPeopleInput.value)
+    ? addNumberOfPeopleErrorClass()
+    : removeNumberOfPeopleErrorClass();
+}
+
+function addNumberOfPeopleErrorClass() {
+  noOfPeopleErrorZone.classList.add(activateNoOfPeopleErrorZone);
+}
+
+function removeNumberOfPeopleErrorClass() {
+  noOfPeopleErrorZone.classList.remove(activateNoOfPeopleErrorZone);
 }

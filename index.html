@@ -84,9 +84,16 @@
               </div>
             </div>
             <div class="calculator-number-of-people-block block">
-              <h2 class="calculator-number-of-people-title">
-                Number of People
-              </h2>
+              <div class="number-of-people-title-wrapper">
+                <h2 class="calculator-number-of-people-title">
+                  Number of People
+                </h2>
+                <span
+                  id="number-of-people-error-zone"
+                  class="number-of-people-error"
+                  >Can't be zero</span
+                >
+              </div>
               <div class="decorator-container">
                 <input
                   type="number"
@@ -98,26 +105,28 @@
             </div>
           </section>
           <section class="calculator-result">
-            <div class="calculator-amount-block block">
-              <div class="calculator-tip-amount-per-person-title-container">
-                <h2 class="calculator-amount-title">
-                  <span>Tip Amount</span><br />
-                  / person
-                </h2>
+            <div>
+              <div class="calculator-amount-block block">
+                <div class="calculator-tip-amount-per-person-title-container">
+                  <h2 class="calculator-amount-title">
+                    <span>Tip Amount</span><br />
+                    / person
+                  </h2>
+                </div>
+                <div class="calculator-amount" id="tip-amount">$</div>
               </div>
-              <div class="calculator-amount" id="tip-amount">$</div>
-            </div>
-            <div class="calculator-amount-block block">
-              <div class="calculator-total-amount-per-person-title-container">
-                <h2 class="calculator-amount-title">
-                  <span>Total Amount</span><br />
-                  / person
-                </h2>
+              <div class="calculator-amount-block block">
+                <div class="calculator-total-amount-per-person-title-container">
+                  <h2 class="calculator-amount-title">
+                    <span>Total Amount</span><br />
+                    / person
+                  </h2>
+                </div>
+                <div class="calculator-amount" id="total-amount">$</div>
               </div>
-              <div class="calculator-amount" id="total-amount">$</div>
             </div>
             <div class="calculator-reset-block">
-              <button class="calculator-reset-button" id="reset-button">
+              <button class="calculator-reset-button-enabled" id="reset-button">
                 RESET
               </button>
             </div>
