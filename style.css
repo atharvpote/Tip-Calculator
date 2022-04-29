@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+:root {
+  --strong-cyan: hsl(172deg 67% 45%);
+  --very-dark-cyan: hsl(183deg 100% 15%);
+  --dark-grayish-cyan: hsl(186deg 14% 43%);
+  --grayish-cyan: hsl(184deg 14% 56%);
+  --light-grayish-cyan: hsl(185deg 41% 84%);
+  --very-light-grayish-cyan: hsl(189deg 41% 97%);
+  --white: hsl(0deg 0% 100%);
+  --form-input-font-size: calc(1rem + ((1rem / 24px) * 100));
+}
+
+body {
+  font-family: "Space Mono", monospace;
+}
