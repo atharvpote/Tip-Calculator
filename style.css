@@ -59,9 +59,10 @@ button {
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
   font-size: var(--form-input-font-size);
+  cursor: pointer;
 }
 
-.calculator__wrapper {
+.calculator-wrapper {
   border-top-left-radius: var(--block-border-radius);
   border-top-right-radius: var(--block-border-radius);
   overflow: hidden;
@@ -71,7 +72,7 @@ button {
   margin: 0 auto;
 }
 
-.calculator__title {
+.calculator-title {
   color: var(--grayish-cyan);
   text-align: center;
 }
@@ -98,61 +99,61 @@ button {
   fill: var(--grayish-cyan);
 }
 
-.calculator__select-tip-block-title {
+.calculator-select-tip-block-title {
   margin-bottom: 1rem;
 }
 
-.calculator__select-tip-input-container {
+.calculator-select-tip-input-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
 }
 
-.calculator__select-tip-button {
+.calculator-select-tip-button {
   background-color: var(--very-dark-cyan);
   color: var(--white);
 }
 
-.calculator__select-tip-button--selected {
+.calculator-select-tip-button-SELECTED {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
 }
 
-.calculator__custom-tip-input::placeholder {
+.calculator-custom-tip-input::placeholder {
   text-align: center;
 }
 
-.calculator__custom-tip-input--selected {
+.calculator-custom-tip-input-SELECTED {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
 }
 
-.calculator__custom-tip-input--selected::placeholder {
+.calculator-custom-tip-input-SELECTED::placeholder {
   color: var(--very-dark-cyan);
 }
 
-.calculator__result {
+.calculator-result {
   background-color: var(--very-dark-cyan);
   padding: 1rem;
   border-radius: var(--block-border-radius);
 }
 
-.calculator__amount-block {
+.calculator-amount-block {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.calculator__amount-title > span {
+.calculator-amount-title > span {
   color: var(--white);
 }
 
-.calculator__amount {
+.calculator-amount {
   font-size: 2rem;
   color: var(--strong-cyan);
 }
 
-.calculator__reset-button {
+.calculator-reset-button {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
 }

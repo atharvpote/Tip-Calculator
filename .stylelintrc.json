@@ -4,6 +4,6 @@
         "stylelint-config-prettier"
     ],
     "rules": {
-        "selector-class-pattern": null
+        "selector-class-pattern": "^([a-z][a-z0-9]*)(-[a-zA-Z0-9]+)*$"
     }
 }
