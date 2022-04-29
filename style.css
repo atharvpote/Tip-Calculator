@@ -35,11 +35,20 @@ body {
   align-items: flex-end;
 }
 
+h1 {
+  color: var(--very-dark-cyan);
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: 8px;
+  opacity: 0.75;
+}
+
 h2 {
   margin-top: 0;
   font-size: 0.75rem;
   color: var(--dark-grayish-cyan);
   margin-bottom: 0.25rem;
+  opacity: 0.9;
 }
 
 input {
@@ -80,11 +89,6 @@ button {
   padding: 1.5rem;
   max-width: 375px;
   min-height: 100%;
-}
-
-.calculator-title {
-  color: var(--grayish-cyan);
-  text-align: center;
 }
 
 .block {
@@ -147,6 +151,7 @@ button {
 
 .calculator-custom-tip-input::placeholder {
   text-align: center;
+  font-weight: var(--font-weight-bold);
 }
 
 .number-of-people-title-wrapper {
