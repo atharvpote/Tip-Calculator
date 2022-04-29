@@ -8,9 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Fontawesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/f8c72b6cfb.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css" />
     <title>Tip Calculator</title>
@@ -18,59 +23,68 @@
   <body>
     <main>
       <section class="calulator">
-        <section class="calculator__inputs">
-          <h1 class="calculator__title">SPLI<br />TTER</h1>
-          <div class="calculator__bill-block">
-            <h2 class="calculator__bill-block-title">Bill</h2>
-            <input type="number" name="" id="" class="calculator__bill-input" />
-          </div>
-          <div class="calculator__select-tip-block">
-            <h2 class="calculator__select-tip-block-title"></h2>
-            <button class="calculator__select-tip-button">5%</button>
-            <button class="calculator__select-tip-button">10%</button>
-            <button class="calculator__select-tip-button">15%</button>
-            <button class="calculator__select-tip-button">25%</button>
-            <button class="calculator__select-tip-button">50%</button>
-            <input
-              type="number"
-              name=""
-              id=""
-              class="calulator__custom-tip-input"
-            />
-          </div>
-          <div class="calculator__number-of-people-block">
-            <h2 class="calculator__number-of-people-title">Number of People</h2>
-            <input
-              type="number"
-              name=""
-              id=""
-              class="calculator__number-of-people-input"
-            />
-          </div>
-        </section>
-        <section class="calculator__result">
-          <div class="calculator__tip-amount-block">
-            <div class="">
-              <h2 class="calculator__tip-amount-per-person">
-                Tip Amount<br />
-                / person
-              </h2>
+        <h1 class="calculator__title">SPLI<br />TTER</h1>
+        <div class="calculator__wrapper">
+          <section class="calculator__inputs">
+            <div class="calculator__bill-block block">
+              <h2 class="calculator__bill-block-title">Bill</h2>
+              <div class="calculator__bill-input-container decorator-container">
+                <input type="number" class="calculator__bill-input" />
+                <span class="input-decoretor">$</span>
+              </div>
             </div>
-            <div class="calculator__tip-amount"></div>
-          </div>
-          <div class="calculator__total-amount-block">
-            <div class="">
-              <h2 class="calculator__total-amount-per-person">
-                Total Amount<br />
-                / person
-              </h2>
+            <div class="calculator__select-tip-block block">
+              <h2 class="calculator__select-tip-block-title">Select Tip %</h2>
+              <div class="calculator__select-tip-input-container">
+                <button class="calculator__select-tip-button">5%</button>
+                <button class="calculator__select-tip-button">10%</button>
+                <button class="calculator__select-tip-button">15%</button>
+                <button class="calculator__select-tip-button">25%</button>
+                <button class="calculator__select-tip-button">50%</button>
+                <input
+                  type="number"
+                  class="calculator__custom-tip-input"
+                  placeholder="Custom"
+                />
+              </div>
             </div>
-            <div class="calculator__total-amount"></div>
-          </div>
-          <div class="calculator__reset-block">
-            <button class="calculator__reset-button">RESET</button>
-          </div>
-        </section>
+            <div class="calculator__number-of-people-block block">
+              <h2 class="calculator__number-of-people-title">
+                Number of People
+              </h2>
+              <div class="decorator-container">
+                <input
+                  type="number"
+                  class="calculator__number-of-people-input"
+                />
+                <span class="fa-solid fa-user input-decoretor"></span>
+              </div>
+            </div>
+          </section>
+          <section class="calculator__result">
+            <div class="calculator__amount-block block">
+              <div class="calculator__tip-amount-per-person-title-container">
+                <h2 class="calculator__amount-title">
+                  <span>Tip Amount</span><br />
+                  / person
+                </h2>
+              </div>
+              <div class="calculator__amount">$</div>
+            </div>
+            <div class="calculator__amount-block block">
+              <div class="calculator__total-amount-per-person-title-container">
+                <h2 class="calculator__amount-title">
+                  <span>Total Amount</span><br />
+                  / person
+                </h2>
+              </div>
+              <div class="calculator__amount">$</div>
+            </div>
+            <div class="calculator__reset-block">
+              <button class="calculator__reset-button">RESET</button>
+            </div>
+          </section>
+        </div>
       </section>
     </main>
     <script src="./main.js" defer></script>
