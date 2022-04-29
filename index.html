@@ -29,21 +29,56 @@
             <div class="calculator-bill-block block">
               <h2 class="calculator-bill-block-title">Bill</h2>
               <div class="calculator-bill-input-container decorator-container">
-                <input type="number" class="calculator-bill-input" />
+                <input
+                  type="number"
+                  class="calculator-bill-input"
+                  id="bill-input"
+                />
                 <span class="input-decoretor">$</span>
               </div>
             </div>
             <div class="calculator-select-tip-block block">
               <h2 class="calculator-select-tip-block-title">Select Tip %</h2>
               <div class="calculator-select-tip-input-container">
-                <button class="calculator-select-tip-button">5%</button>
-                <button class="calculator-select-tip-button">10%</button>
-                <button class="calculator-select-tip-button">15%</button>
-                <button class="calculator-select-tip-button">25%</button>
-                <button class="calculator-select-tip-button">50%</button>
+                <button
+                  class="calculator-select-tip-button calculator-select-tip-button-SELECTED SELECTED"
+                  id="default-tip"
+                  value="5"
+                >
+                  5%
+                </button>
+                <button
+                  class="calculator-select-tip-button"
+                  id="tip-button-10"
+                  value="10"
+                >
+                  10%
+                </button>
+                <button
+                  class="calculator-select-tip-button"
+                  id="tip-button-15"
+                  value="15"
+                >
+                  15%
+                </button>
+                <button
+                  class="calculator-select-tip-button"
+                  id="tip-button-25"
+                  value="25"
+                >
+                  25%
+                </button>
+                <button
+                  class="calculator-select-tip-button"
+                  id="tip-button-50"
+                  value="50"
+                >
+                  50%
+                </button>
                 <input
                   type="number"
                   class="calculator-custom-tip-input"
+                  id="custom-tip-input"
                   placeholder="Custom"
                 />
               </div>
@@ -56,6 +91,7 @@
                 <input
                   type="number"
                   class="calculator-number-of-people-input"
+                  id="number-of-people-input"
                 />
                 <span class="fa-solid fa-user input-decoretor"></span>
               </div>
@@ -69,7 +105,7 @@
                   / person
                 </h2>
               </div>
-              <div class="calculator-amount">$</div>
+              <div class="calculator-amount" id="tip-amount">$</div>
             </div>
             <div class="calculator-amount-block block">
               <div class="calculator-total-amount-per-person-title-container">
@@ -78,10 +114,12 @@
                   / person
                 </h2>
               </div>
-              <div class="calculator-amount">$</div>
+              <div class="calculator-amount" id="total-amount">$</div>
             </div>
             <div class="calculator-reset-block">
-              <button class="calculator-reset-button">RESET</button>
+              <button class="calculator-reset-button" id="reset-button">
+                RESET
+              </button>
             </div>
           </section>
         </div>
