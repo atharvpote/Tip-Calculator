@@ -29,6 +29,9 @@ body {
   margin: 0;
   min-height: 100vh;
   font-weight: var(--font-weight-bold);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 h2 {
@@ -51,6 +54,12 @@ input {
   color: var(--very-dark-cyan);
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 button {
   width: 100%;
   border-radius: 5px;
@@ -70,6 +79,7 @@ button {
   padding: 1.5rem;
   max-width: 375px;
   margin: 0 auto;
+  min-height: 100%;
 }
 
 .calculator-title {
@@ -119,12 +129,44 @@ button {
   color: var(--very-dark-cyan);
 }
 
+.calculator-custom-tip-input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.calculator-custom-tip-input::-moz-placeholder {
+  text-align: center;
+}
+
+.calculator-custom-tip-input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.calculator-custom-tip-input::-ms-input-placeholder {
+  text-align: center;
+}
+
 .calculator-custom-tip-input::placeholder {
   text-align: center;
 }
 
 .calculator-custom-tip-input-SELECTED {
   background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.calculator-custom-tip-input-SELECTED::-webkit-input-placeholder {
+  color: var(--very-dark-cyan);
+}
+
+.calculator-custom-tip-input-SELECTED::-moz-placeholder {
+  color: var(--very-dark-cyan);
+}
+
+.calculator-custom-tip-input-SELECTED:-ms-input-placeholder {
+  color: var(--very-dark-cyan);
+}
+
+.calculator-custom-tip-input-SELECTED::-ms-input-placeholder {
   color: var(--very-dark-cyan);
 }
 
