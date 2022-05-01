@@ -136,7 +136,7 @@ function inputListener() {
 }
 
 function numberOfPeopleErrorHandler() {
-  !Number.parseInt(numberOfPeopleInput.value)
+  Number.parseInt(numberOfPeopleInput.value) === 0
     ? addNumberOfPeopleErrorClass()
     : removeNumberOfPeopleErrorClass();
 }
